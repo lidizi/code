@@ -40,16 +40,27 @@
       <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
   </div>
 
+<!-- 
 
-  <div>
+  data-slideshow-index="2" 
+  通过 this.element.getAttribute("data-slideshow-index")
+  stimulus 有一个简单的api this.data.get("index")
 
+
+    -->
+
+  <div data-controller="slideshow" data-slideshow-index="2">
+j
     <button data-action="slideshow#previous"><- </button>
-    <button data-action="slideshow#next"> <- </button>
-    <div data-target="slideshow.slide"class="slide">🐵</div>
-    <div data-target="slideshow.slide"class="slide">🐵</div>
-    <div data-target="slideshow.slide"class="slide">🐵</div>
-    <div data-target="slideshow.slide"class="slide">🐵</div>
-    <div data-target="slideshow.slide"class="slide">🐵</div>
-    </div>
+      <button data-action="slideshow#next"> -> </button>
+    <div data-target="slideshow.slide"class="slide">🐵1</div>
+    <div data-target="slideshow.slide"class="slide">🐵2</div>
+    <div data-target="slideshow.slide"class="slide">🐵3</div>
+    <div data-target="slideshow.slide"class="slide">🐵4</div>
+    <div data-target="slideshow.slide"class="slide">🐵5</div>
+  </div>
+<!-- 异步加载HTML -->
+  <div data-controller="content-loader" data-content-loader-url="/messages.html" data-content-loader-interval="500">
+  </div>
   </body>
 </html>

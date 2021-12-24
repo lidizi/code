@@ -14,4 +14,7 @@ body {
 .slide{
   display: none;
 }
-jj
+
+.slide-current{
+  display: block;
+}
